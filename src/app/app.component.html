@@ -1,0 +1,21 @@
+	<div>
+		<input type="text">
+ </div>
+  <div>
+    <filter-select [options]="options" (result)="onResult($event)">
+    </filter-select>
+  </div>
+  <div>
+    <select size="4"
+      ><option>one</option
+      ><option>two</option
+      ><option>three</option
+      ><option>four</option
+      ><option>five</option
+      ><option>six</option
+      ><option>seven</option>
+    </select>
+  </div>
+  <div>
+    {{selectedOption | json}}
+  </div>

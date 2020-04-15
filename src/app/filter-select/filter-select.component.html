@@ -1,0 +1,18 @@
+<div class="component">
+	<div class="box">
+		<select #fakeInput ><option hidden="true">{{ filterTextHTML| async}}</option>
+    </select>
+	</div>
+	<div class="dropdown" #dropdown>
+		<div class="inner" [hidden]="!(weAreLive | async)">
+			<input #filterInput type="text" placeholder="search">
+			<select size=5 #selectBox  class="tp-select" >
+       <option *ngFor = "let option of (filteredOptions | async); index as i;" [value]="option.id" [selected]="option.selected">
+         {{(filteredOptionsHighlighted | async)[i].preHighlight }}{{(filteredOptionsHighlighted | async)[i].highlightString }}{{(filteredOptionsHighlighted | async)[i].postHighlight }}
+       </option>
+      </select>
+		</div>
+	</div>
+</div>
+
+<!-- {{filteredOptionsHighlighted[i].preHighlight}}{{filteredOptionsHighlighted[i].highlightString}}{{filteredOptionsHighlighted[i].postHighlight}} -->

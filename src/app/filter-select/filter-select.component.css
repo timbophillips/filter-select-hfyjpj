@@ -1,0 +1,34 @@
+/* .box {
+  z-index:-1;
+} */
+
+input {
+  margin-bottom: .5rem;
+  width: 100%;
+}
+
+.dropdown {
+  width: 100%;
+  position: relative;
+}
+
+.inner {
+  z-index: 1;
+  padding: .5rem;
+  background-color: #fff;
+  border: 1px solid #999;
+  position: absolute;
+  top:0;
+  left: 0;
+  right: 0;
+}
+
+select {
+    margin-bottom: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.highlight {
+  color: red;
+}
